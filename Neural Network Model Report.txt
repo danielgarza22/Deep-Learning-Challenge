@@ -1,0 +1,24 @@
+Overview:
+The purpose of this analysis was to predict whether applicants for non-profit foundation Alphabet Soup funding will be successful.
+
+Results:
+
+Data Preprocessing
+- What variable(s) are considered the target(s) for your model?
+	* IS_SUCCESSFUL (0- NOT SUCCESSFUL, 1- SUCCESSFUL)
+- What variable(s) are considered to be the features for your model?
+	* APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPEACIAL_CONSIDERATIONS, ASK_AMT, IS_SUCCESSFUL
+- What variable(s) are neither targets nor features, and should be removed from the input data?
+	* EIN was dropped because it provides no useful data
+	* STATUS was removed because comparably minimal 0s
+	* SPECIAL_CONSIDERATIONS was removed because comparably minimal Ys
+- Compiling, Training, and Evaluating the Model
+	* How many neurons, layers, and activation functions did you select for your neural network model, and why?
+		- Selected 3 layers, of 100, 30, 10 nodes, activations relu & sigmoid each to optimize the model further than the initial model
+	* Were you able to achieve the target model performance?
+		- Yes, the model perform a accuracy of 79.66%
+	* What steps did you take to try and increase model performance?
+		- Increasing the number of layers and the activation types within the neural network model
+
+Summary:
+Increasing the number of layers, neurons, and altering activation functions, the neural network improved accuracy compared to the first model. An alternate model to consider could be the random forest classifer to comparably classify the data.
